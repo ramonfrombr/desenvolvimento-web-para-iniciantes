@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+/* Importa as fontes "Open Sans" e "Roboto" (normal e negrito) do Google Fonts */
+
+/* Reset básico */
+*,
+::after,
+::before {
+    margin: 0; /* Remove margens padrão de todos os elementos */
+    padding: 0; /* Remove espaçamentos internos padrão */
+    box-sizing: border-box; /* Inclui bordas e padding no cálculo da largura/altura */
+}
+
+body {
+    font-family: "Open Sans", sans-serif; /* Define fonte padrão do corpo do site */
+    background: #f1f5f8; /* Cor de fundo clara */
+    color: #102a42; /* Cor padrão do texto */
+    line-height: 1.5; /* Espaçamento vertical entre linhas */
+    font-size: 0.875rem; /* Tamanho da fonte base (≈14px) */
+}
+
+ul {
+    list-style-type: none; /* Remove os marcadores das listas */
+}
+
+a {
+    text-decoration: none; /* Remove sublinhado padrão dos links */
+}
+
+nav {
+    background: #fff; /* Fundo branco para a barra de navegação */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra suave embaixo da navbar */
+}
+
+.navegacao-cabecalho {
+    display: flex; /* Coloca os itens lado a lado (flexbox) */
+    align-items: center; /* Alinha verticalmente ao centro */
+    justify-content: space-between; /* Espaça os itens nos extremos */
+    padding: 1rem; /* Espaçamento interno */
+}
+
+.navegacao-botao {
+    font-size: 1.5rem; /* Define tamanho do ícone/botão */
+    color: #49a6e9; /* Cor azul clara */
+    background: transparent; /* Remove fundo */
+    border-color: transparent; /* Remove borda */
+    transition: all 0.3s linear; /* Suaviza transições de estilo */
+    cursor: pointer; /* Mostra que o botão é clicável */
+}
+
+.navegacao-botao:hover {
+    color: #063251; /* Cor azul mais escura no hover */
+    transform: rotate(90deg); /* Gira o botão em 90° ao passar o mouse */
+}
+
+.navegacao-logotipo {
+    font-size: 40px; /* Define tamanho do ícone do logotipo */
+}
+
+.navegacao-links a {
+    color: #324d67; /* Cor dos links */
+    font-size: 1rem; /* Tamanho da fonte dos links */
+    text-transform: capitalize; /* Primeira letra em maiúscula */
+    letter-spacing: 0.1rem; /* Espaçamento entre letras */
+    display: block; /* Ocupa toda a largura disponível */
+    padding: 0.5rem 1rem; /* Espaçamento interno dos links */
+    transition: all 0.3s linear; /* Suaviza a animação ao interagir */
+}
+
+.navegacao-links a:hover {
+    background: #dbeafe; /* Fundo azul claro ao passar o mouse */
+    color: #49a6e9; /* Texto fica azul claro */
+    padding-left: 1.5rem; /* Move o texto levemente para a direita */
+}
+
+.navegacao-icones-sociais {
+    display: none; /* Esconde ícones sociais em telas pequenas */
+}
+
+.navegacao-links {
+    height: 0; /* Esconde os links (altura zero) */
+    overflow: hidden; /* Impede que os links ultrapassem a área */
+    transition: all 0.3s linear; /* Transição suave ao abrir/fechar menu */
+}
+
+.mostrar-links {
+    height: 10rem; /* Exibe os links expandindo a altura */
+}
+
+/* Estilos específicos para telas maiores (mínimo 800px) */
+@media screen and (min-width: 800px) {
+    .navegacao-centro {
+        max-width: 1170px; /* Largura máxima do container */
+        margin: 0 auto; /* Centraliza horizontalmente */
+        display: flex; /* Ativa layout flex */
+        align-items: center; /* Alinha itens no centro vertical */
+        justify-content: space-between; /* Espaço entre logo e menus */
+        padding: 1rem; /* Espaçamento interno */
+    }
+
+    .navegacao-cabecalho {
+        padding: 0; /* Remove o padding no desktop */
+    }
+
+    .navegacao-botao {
+        display: none; /* Esconde botão hamburguer em telas grandes */
+    }
+
+    .navegacao-links {
+        height: auto; /* Links ficam sempre visíveis */
+        display: flex; /* Links lado a lado */
+    }
+
+    .navegacao-links a {
+        padding: 0; /* Remove padding interno */
+        margin: 0 0.5rem; /* Espaçamento horizontal entre links */
+    }
+
+    .navegacao-links a:hover {
+        padding: 0; /* Evita deslocamento do texto */
+        background: transparent; /* Remove fundo no hover */
+    }
+
+    .navegacao-icones-sociais {
+        display: flex; /* Mostra ícones sociais */
+    }
+
+    .navegacao-icones-sociais a {
+        margin: 0 0.5rem; /* Espaçamento entre ícones */
+        color: #49a6e9; /* Azul claro padrão */
+        transition: all 0.3s linear; /* Transição suave ao interagir */
+    }
+
+    .navegacao-icones-sociais a:hover {
+        color: #8ecae6; /* Azul mais claro no hover */
+    }
+}

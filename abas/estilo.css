@@ -1,0 +1,165 @@
+/* Importa as fontes Open Sans e Roboto do Google Fonts (com pesos 400 e 700) */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+/* ===== Reset e estilos base ===== */
+
+/* Remove margens e preenchimentos padrão e define box-sizing como border-box para todos os elementos e pseudo-elementos */
+*,
+::after,
+::before {
+    margin: 0; /* Remove a margem padrão */
+    padding: 0; /* Remove o preenchimento padrão */
+    box-sizing: border-box; /* Inclui padding e borda no cálculo da largura/altura do elemento */
+}
+
+body {
+    font-family: "Open Sans", sans-serif; /* Define a fonte principal como Open Sans */
+    background: hsl(210, 36%, 96%); /* Cor de fundo cinza claro */
+    color: hsl(209, 61%, 16%); /* Cor do texto cinza escuro */
+    line-height: 1.5; /* Melhora a legibilidade aumentando o espaçamento entre linhas */
+    font-size: 0.875rem; /* Define o tamanho da fonte base (equivale a 14px se o root for 16px) */
+}
+
+ul {
+    padding-left: 20px;
+}
+
+img {
+    display: block; /* Remove o espaço em branco abaixo da imagem */
+    width: 100%; /* Faz com que a imagem ocupe 100% da largura do contêiner */
+}
+
+/* ===== Tipografia ===== */
+
+h2,
+h4 {
+    letter-spacing: 0.25rem; /* Adiciona espaçamento entre as letras */
+    text-transform: capitalize; /* Capitaliza a primeira letra de cada palavra */
+    margin-bottom: 0.75rem; /* Espaçamento abaixo dos títulos */
+    font-family: "Roboto", sans-serif; /* Usa a fonte Roboto para os títulos */
+}
+
+h2 {
+    font-size: 2rem; /* Define o tamanho da fonte para h2 */
+}
+
+h4 {
+    font-size: 0.875rem; /* Define o tamanho da fonte para h4 */
+}
+
+p {
+    margin-bottom: 1.25rem; /* Adiciona espaço abaixo dos parágrafos */
+    color: hsl(
+        210,
+        22%,
+        49%
+    ); /* Define a cor do texto dos parágrafos (cinza médio) */
+}
+
+/* ===== Seções ===== */
+
+.secao {
+    padding: 5rem 0; /* Adiciona padding vertical (em cima e embaixo) à seção */
+}
+
+.secao-centro {
+    width: 90vw; /* Define a largura como 90% da largura da viewport */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    max-width: 1170px; /* Define a largura máxima do conteúdo */
+}
+
+/* ===== Seção "Sobre" (About) ===== */
+
+.titulo {
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 4rem; /* Adiciona espaço abaixo do título */
+}
+
+.titulo p {
+    width: 80%; /* Limita a largura do parágrafo */
+    margin: 0 auto; /* Centraliza o parágrafo */
+}
+
+.sobre-centro {
+    display: grid; /* Usa layout de grid */
+    grid-template-columns: 1fr; /* Uma única coluna por padrão */
+    gap: 2rem; /* Espaçamento entre os elementos do grid */
+}
+
+/* Altera para duas colunas em telas maiores (>= 992px) */
+@media screen and (min-width: 992px) {
+    .sobre-centro {
+        grid-template-columns: 1fr 1fr; /* Divide em duas colunas de mesma largura */
+    }
+}
+
+.sobre-imagem {
+    margin-bottom: 2rem; /* Espaço abaixo da imagem (em dispositivos menores) */
+}
+
+.sobre-imagem img {
+    border-radius: 0.5rem; /* Cantos arredondados na imagem */
+    object-fit: cover; /* Faz a imagem cobrir o contêiner sem distorcer */
+    height: 20rem; /* Define a altura da imagem */
+}
+
+.sobre {
+    background: #fff; /* Fundo branco */
+    border-radius: 0.5rem; /* Cantos arredondados */
+    display: grid; /* Usa grid layout */
+    grid-template-rows: auto 1fr; /* Primeira linha com altura automática, segunda preenche o restante */
+}
+
+.botao-container {
+    border-top-left-radius: 0.5rem; /* Arredonda o canto superior esquerdo */
+    border-top-right-radius: 0.5rem; /* Arredonda o canto superior direito */
+    display: grid; /* Usa layout em grid */
+    grid-template-columns: 1fr 1fr 1fr; /* Três colunas iguais (para os botões) */
+}
+
+.aba-botao {
+    padding: 1rem 0; /* Padding vertical */
+    border: none; /* Remove a borda padrão */
+    text-transform: capitalize; /* Capitaliza o texto */
+    font-size: 1rem; /* Tamanho da fonte */
+    display: block; /* Exibe como bloco */
+    background: hsl(212, 33%, 89%); /* Cor de fundo cinza claro */
+    cursor: pointer; /* Muda o cursor para ponteiro ao passar o mouse */
+    transition: all 0.3s linear; /* Adiciona uma transição suave de 0.3s para todas as propriedades */
+    letter-spacing: 0.25rem; /* Espaçamento entre as letras */
+}
+
+/* Arredonda o canto superior esquerdo do primeiro botão */
+.aba-botao:nth-child(1) {
+    border-top-left-radius: 0.5rem;
+}
+
+/* Arredonda o canto superior direito do terceiro botão */
+.aba-botao:nth-child(3) {
+    border-top-right-radius: 0.5rem;
+}
+
+/* Estilo ao passar o mouse sobre o botão (se não estiver ativo) */
+.aba-botao:hover:not(.ativo) {
+    background: hsl(205, 100%, 96%); /* Cor de fundo azul claro */
+    color: #49a6e9; /* Cor do texto azul */
+}
+
+/* Estilo para o botão ativo */
+.aba-botao.ativo {
+    background: #fff; /* Fundo branco */
+}
+
+.conteudo-sobre {
+    border-bottom-left-radius: 0.5rem; /* Arredonda o canto inferior esquerdo */
+    border-bottom-right-radius: 0.5rem; /* Arredonda o canto inferior direito */
+    padding: 2rem 1.5rem; /* Espaçamento interno do conteúdo */
+}
+
+.conteudo {
+    display: none; /* Esconde o conteúdo por padrão */
+}
+
+.conteudo.ativo {
+    display: block; /* Exibe o conteúdo ativo */
+}

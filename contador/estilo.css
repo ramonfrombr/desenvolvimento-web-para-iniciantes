@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+/* Importa duas fontes do Google Fonts: "Open Sans" e "Roboto" (com pesos 400 e 700). 
+   O parâmetro display=swap garante que o texto use uma fonte de fallback até as fontes carregarem. */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Reset básico: remove margens e espaçamentos padrão de todos os elementos.
+   Define o box-sizing como border-box, fazendo com que largura/altura incluam borda e padding. */
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background: hsl(210, 36%, 96%);
+  color: hsl(209, 61%, 16%); /* matiz , saturação e luminosidade */
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+/* Configura o corpo da página:
+   - Fonte padrão "Open Sans" (ou outra sans-serif se não carregar).
+   - Fundo em tom de cinza-azulado claro (HSL).
+   - Cor do texto em azul escuro.
+   - Espaçamento entre linhas de 1.5 (melhora a legibilidade).
+   - Tamanho da fonte base: 0.875rem (~14px). */
+
+h1 {
+  letter-spacing: 0.1rem;
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-family: "Roboto", sans-serif;
+}
+/* Estiliza os títulos <h1>:
+   - Espaçamento entre letras de 0.1rem.
+   - Primeira letra de cada palavra em maiúscula.
+   - Altura da linha ajustada (1.25).
+   - Espaço inferior de 0.75rem.
+   - Usa a fonte "Roboto" para destaque. */
+
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+    line-height: 1;
+  }
+}
+/* Regra de responsividade:
+   - Quando a tela tiver largura mínima de 800px,
+     os <h1> ficam maiores (4rem ≈ 64px) e com altura de linha menor. */
+
+main {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+/* Área principal:
+   - Altura mínima de 100% da altura da janela.
+   - Usa grid layout.
+   - place-items: center centraliza o conteúdo no meio da tela (horizontal e vertical). */
+
+.container {
+  text-align: center;
+}
+/* Centraliza o texto dentro do container. */
+
+#valor {
+  font-size: 6rem;
+  font-weight: bold;
+}
+/* Estilo do elemento com id "valor":
+   - Fonte bem grande (6rem ≈ 96px).
+   - Texto em negrito. */
+
+.botao {
+  text-transform: uppercase;
+  background: transparent;
+  color: #222;
+  padding: 0.375rem 0.75rem;
+  letter-spacing: 0.1rem;
+  display: inline-block;
+  transition: all 0.3s linear;
+  font-size: 0.875rem;
+  border: 2px solid #222;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 0.25rem;
+  margin: 0.5rem;
+}
+/* Estilo para os botões:
+   - Texto em caixa alta.
+   - Fundo transparente e texto escuro (#222).
+   - Padding interno para espaçamento.
+   - Espaçamento entre letras.
+   - Exibido como bloco inline.
+   - Transição suave de 0.3s para efeitos (hover, por ex).
+   - Fonte de 0.875rem.
+   - Borda de 2px sólida.
+   - Cursor muda para "pointer" (mãozinha).
+   - Sombra leve para dar destaque.
+   - Bordas arredondadas (0.25rem).
+   - Espaçamento externo (margin) de 0.5rem. */
+
+.botao:hover {
+  color: #fff;
+  background: #222;
+}
+/* Efeito hover:
+   - Texto fica branco.
+   - Fundo fica escuro (#222). */

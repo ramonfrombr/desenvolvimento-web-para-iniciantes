@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+/* carregador */
+.carregador {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    visibility: visible;
+    z-index: 999;
+    transition: all 0.3s linear;
+}
+.ocultar-carregador {
+    z-index: -999;
+    visibility: hidden;
+}
+
+/* cabeçalho */
+header {
+    min-height: 100vh;
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+}
+
+/* vídeo */
+.container-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+/* título */
+h1 {
+    font-family: "Roboto", sans-serif;
+    font-size: 3rem;
+    letter-spacing: 0.25rem;
+    text-transform: capitalize;
+    margin-bottom: 0.75rem;
+    color: #fff;
+}
+@media screen and (min-width: 800px) {
+    h1 {
+        font-size: 4rem;
+        line-height: 1;
+    }
+}
+
+/* botão de alternância */
+.botao-alternar {
+    position: absolute;
+    bottom: 7%;
+    left: 7%;
+    width: 7rem;
+    height: 2rem;
+    display: flex;
+    border-radius: 0.5rem;
+    align-items: center;
+    justify-content: space-around;
+    border: none;
+    transition: all 0.3s linear;
+}
+.botao-alternar span {
+    font-size: 0.85rem;
+    cursor: pointer;
+    text-transform: capitalize;
+    color: #49a6e9;
+}
+.alternar {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #49a6e9;
+    border-radius: 0.5rem;
+    transition: all 0.3s linear;
+}
+.deslizar .alternar {
+    left: 50%;
+}

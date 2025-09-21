@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Vídeo</title>
+
+        <!-- estilos -->
+        <link rel="stylesheet" href="estilos.css" />
+    </head>
+    <body>
+        <!-- carregador -->
+        <div class="carregador">
+            <img
+                src="preloader.gif"
+                alt="carregador"
+                class="carregador__item"
+            />
+        </div>
+        <!-- cabeçalho -->
+        <header>
+            <video controls muted autoplay loop class="container-video">
+                <source src="./video.mp4" type="video/mp4" />
+            </video>
+            <h1>projeto de vídeo</h1>
+            <!-- botão de alternância do vídeo -->
+            <button class="botao-alternar">
+                <span> play </span>
+                <span> parar </span>
+                <span class="alternar"></span>
+            </button>
+        </header>
+        <!-- javascript -->
+        <script src="script.js"></script>
+    </body>
+</html>
