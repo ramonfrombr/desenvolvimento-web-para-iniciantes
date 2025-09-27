@@ -1,0 +1,146 @@
+/*
+=============== 
+Fontes
+===============
+*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+/*
+=============== 
+Estilos Globais
+===============
+*/
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    background: hsl(210, 36%, 96%);
+    color: hsl(209, 61%, 16%);
+    line-height: 1.5;
+    font-size: 0.875rem;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*
+=============== 
+Barra Lateral
+===============
+*/
+.botao-barra-lateral {
+    position: fixed;
+    top: 2rem;
+    right: 3rem;
+    font-size: 2rem;
+    background: transparent;
+    border-color: transparent;
+    color: hsl(205, 78%, 60%);
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    animation: bounce 2s ease-in-out infinite;
+}
+.botao-barra-lateral:hover {
+    color: hsl(205, 90%, 76%);
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.cabecalho-barra-lateral {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+
+.botao-fechar {
+    font-size: 1.75rem;
+    background: transparent;
+    border-color: transparent;
+    color: hsl(360, 67%, 44%);
+    transition: all 0.3s linear;
+    cursor: pointer;
+}
+.botao-fechar:hover {
+    color: hsl(360, 71%, 66%);
+    transform: rotate(360deg);
+}
+
+.logomarca {
+    justify-self: center;
+    height: 40px;
+}
+
+.links-navegacao a {
+    display: block;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    padding: 1rem 1.5rem;
+    color: hsl(210, 22%, 49%);
+    transition: all 0.3s linear;
+}
+.links-navegacao a:hover {
+    background: hsl(205, 86%, 81%);
+    color: hsl(205, 78%, 60%);
+    padding-left: 1.75rem;
+}
+
+.icones-sociais {
+    justify-self: center;
+    display: flex;
+    padding-bottom: 2rem;
+}
+.icones-sociais a {
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+    color: hsl(205, 78%, 60%);
+    transition: all 0.3s linear;
+}
+.icones-sociais a:hover {
+    color: hsl(205, 86%, 17%);
+}
+
+.barra-lateral {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    row-gap: 1rem;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s linear;
+    transform: translateX(-100%);
+}
+.mostrar-barra-lateral {
+    transform: translateX(0);
+}
+
+@media screen and (min-width: 676px) {
+    .barra-lateral {
+        width: 400px;
+    }
+}

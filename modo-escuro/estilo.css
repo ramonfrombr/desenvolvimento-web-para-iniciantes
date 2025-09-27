@@ -1,0 +1,93 @@
+/*
+=============== 
+Estilos Globais
+=============== 
+*/
+
+:root {
+    --cor-fundo: #fff;
+    --cor-fonte: #282c35;
+    --cor-principal: #d23669;
+    --cor-cinza: #64748b;
+}
+
+.tema-escuro {
+    --cor-fundo: #282c35;
+    --cor-fonte: #fff;
+    --cor-principal: #ffa7c4;
+    --cor-cinza: #cbd5e1;
+}
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    background: var(--cor-fundo);
+    color: var(--cor-fonte);
+    line-height: 1.5;
+    font-size: 0.875rem;
+    transition: all 0.3s linear;
+}
+
+/*
+=============== 
+Barra de Navegação
+=============== 
+*/
+.nav-centro {
+    width: 90vw;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+}
+.nav-centro span {
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+}
+.botao {
+    background: var(--cor-principal);
+    color: var(--cor-fundo);
+    padding: 0.25rem 0.5rem;
+    border-radius: 5px;
+    border-color: transparent;
+    text-transform: capitalize;
+    transition: all 0.3s linear;
+    font-weight: bold;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.artigos {
+    padding: 5rem 0;
+    width: 90vw;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.artigo {
+    margin-bottom: 3rem;
+}
+
+.artigo h2 {
+    color: var(--cor-principal);
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    font-size: 1.75rem;
+}
+.info-artigo {
+    margin-bottom: 0.75rem;
+    font-style: italic;
+    color: var(--cor-cinza);
+}
+.info-artigo span {
+    margin-right: 0.5rem;
+}

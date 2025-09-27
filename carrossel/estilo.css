@@ -1,0 +1,167 @@
+/*
+=============== 
+Fonts
+===============
+*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+/*
+=============== 
+Global Styles
+===============
+*/
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Open Sans", sans-serif;
+    background: #f1f5f8; /* hsl(210, 36%, 96%) */
+    color: #102a42; /* hsl(209, 61%, 16%) */
+    line-height: 1.5;
+    font-size: 0.875rem;
+}
+
+h1,
+h4 {
+    letter-spacing: 0.25rem;
+    text-transform: capitalize;
+    line-height: 1.25;
+    margin-bottom: 0.75rem;
+    font-family: "Roboto", sans-serif;
+}
+h1 {
+    font-size: 3rem;
+}
+h4 {
+    font-size: 0.875rem;
+}
+@media screen and (min-width: 800px) {
+    h1 {
+        font-size: 4rem;
+    }
+    h4 {
+        font-size: 1rem;
+    }
+    body {
+        font-size: 1rem;
+    }
+    h1,
+    h4 {
+        line-height: 1;
+    }
+}
+
+/*
+=============== 
+Slider
+===============
+*/
+.container-carrossel {
+    border: 5px solid #49a6e9;
+    width: 80vw;
+    margin: 0 auto;
+    height: 40vh;
+    max-width: 80rem;
+    position: relative;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    margin-top: 4rem;
+}
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #222;
+    color: #fff;
+    display: grid;
+    place-items: center;
+    transition: all 0.25s ease-in-out;
+    text-align: center;
+}
+
+img {
+    display: block;
+}
+
+.imagem-slide {
+    height: 100%;
+    object-fit: cover;
+}
+
+/* aplica largura 100% a todas as imagens, exceto as imagens de pessoa (classe .imagem-pessoa) */
+img:not(.imagem-pessoa) {
+    width: 100%;
+}
+
+.slide h1 {
+    font-size: 5rem;
+}
+.imagem-pessoa {
+    border-radius: 50%;
+    width: 6rem;
+    height: 6rem;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
+.slide:nth-child(1) h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.slide:nth-child(3) {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url("./img-2.jpeg") center/cover no-repeat;
+}
+
+/*
+=============== 
+Buttons
+===============
+*/
+.container-botoes {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.75rem;
+}
+.botao-anterior,
+.botao-proximo {
+    background: transparent;
+    border-color: transparent;
+    font-size: 1.75rem;
+    cursor: pointer;
+    margin: 0 0.25rem;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    color: #617d98; /* hsl(210, 22%, 49%) */
+    transition: all 0.3s linear;
+}
+.botao-anterior:hover,
+.botao-proximo:hover {
+    color: #324d67; /* hsl(209, 34%, 30%) */
+}
+
+/*
+=============== 
+Media Queries
+===============
+*/
+@media screen and (min-width: 576px) {
+    .container-carrossel {
+        height: 45vh;
+    }
+}
+@media screen and (min-width: 768px) {
+    .container-carrossel {
+        height: 55vh;
+    }
+}
+@media screen and (min-width: 992px) {
+    .container-carrossel {
+        height: 65vh;
+    }
+}
