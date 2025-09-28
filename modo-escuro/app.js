@@ -1,3 +1,5 @@
+moment.locale("pt");
+
 const botaoAlternar = document.querySelector(".botao");
 const containerArtigos = document.querySelector(".artigos");
 
@@ -7,7 +9,7 @@ botaoAlternar.addEventListener("click", () => {
 
 const dadosArtigos = artigos
     .map((artigo) => {
-        const { titulo, data, duracao, trecho } = artigo;
+        const { titulo, data, duracao, conteudo } = artigo;
         const dataFormatada = moment(data).format("D [de] MMMM [de] YYYY");
         return `<article class="artigo">
           <h2>${titulo}</h2>
@@ -16,7 +18,7 @@ const dadosArtigos = artigos
             <span>${duracao} min de leitura</span>
           </div>
           <p>
-            ${trecho}
+            ${conteudo}
           </p>
         </article>`;
     })
