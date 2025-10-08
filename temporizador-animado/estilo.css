@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+h4 {
+    font-size: 20px;
+    margin: 5px;
+    text-transform: uppercase; /* transforma o texto em maiúsculas */
+}
+
+.contador {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.contador.esconder {
+    transform: translate(-50%, -50%) scale(0);
+    animation: esconder 0.2s ease-out;
+}
+
+@keyframes esconder {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(0);
+    }
+}
+
+.final {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    text-align: center;
+}
+
+.final.mostrar {
+    transform: translate(-50%, -50%) scale(1);
+    animation: mostrar 0.2s ease-out;
+}
+
+@keyframes mostrar {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+    }
+
+    30% {
+        transform: translate(-50%, -50%) scale(1.4);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.numeros {
+    color: #3498db;
+    font-size: 50px;
+    position: relative;
+    overflow: hidden;
+    width: 250px;
+    height: 50px;
+}
+
+.numeros span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(120deg);
+    transform-origin: bottom center;
+}
+
+.numeros span.entrando {
+    transform: translate(-50%, -50%) rotate(0deg);
+    animation: entrar 0.5s ease-in-out;
+}
+
+.numeros span.saindo {
+    animation: sair 0.5s ease-in-out;
+}
+
+@keyframes entrar {
+    0% {
+        transform: translate(-50%, -50%) rotate(120deg);
+    }
+
+    30% {
+        transform: translate(-50%, -50%) rotate(-20deg);
+    }
+
+    60% {
+        transform: translate(-50%, -50%) rotate(10deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+}
+
+@keyframes sair {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    60% {
+        transform: translate(-50%, -50%) rotate(20deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(-120deg);
+    }
+}
+
+#reiniciar {
+    background-color: #3498db;
+    border-radius: 3px;
+    border: none;
+    color: aliceblue;
+    padding: 5px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#reiniciar span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.3s;
+}
+
+#reiniciar span:after {
+    content: "\00bb";
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+#reiniciar:hover span {
+    padding-right: 25px;
+}
+
+#reiniciar:hover span:after {
+    opacity: 1;
+    right: 0;
+}

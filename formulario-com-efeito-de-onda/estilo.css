@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: steelblue;
+    color: #fff;
+    font-family: "Muli", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 20px 40px;
+    border-radius: 5px;
+}
+
+.container h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.container a {
+    text-decoration: none;
+    color: lightblue;
+}
+
+.botao {
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+    background: lightblue;
+    padding: 15px;
+    font-family: inherit;
+    font-size: 16px;
+    border: 0;
+    border-radius: 5px;
+}
+
+.botao:focus {
+    outline: 0;
+}
+
+.botao:active {
+    transform: scale(0.98);
+}
+
+.texto {
+    margin-top: 30px;
+}
+
+.controle-formulario {
+    position: relative;
+    margin: 20px 0 40px;
+    width: 300px;
+}
+
+.controle-formulario input {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px #fff solid;
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+    color: #fff;
+    position: relative;
+    z-index: 100;
+}
+
+.controle-formulario input:focus,
+.controle-formulario input:valid {
+    outline: 0;
+    border-bottom-color: lightblue;
+}
+
+.controle-formulario label {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    pointer-events: none;
+}
+
+.controle-formulario label span {
+    display: inline-block;
+    font-size: 18px;
+    min-width: 5px;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+
+/*
+Dentro de um elemento com a classe .controle-formulario,
+quando um elemento <input> está em foco,
+selecione o elemento <span> que está dentro do <label> que vem depois desse input (como um elemento irmão).
+*/
+.controle-formulario input:focus ~ label span,
+.controle-formulario input:valid ~ label span {
+    color: lightblue;
+    transform: translateY(-30px);
+}
