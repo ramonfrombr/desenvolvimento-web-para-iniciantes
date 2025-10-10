@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="estilo.css" />
+        <title>Lista de Usuários Filtrável</title>
+    </head>
+    <body>
+        <div class="container">
+            <header class="header">
+                <h4 class="title">Filtro de Usuários em Tempo Real</h4>
+                <small class="subtitle"
+                    >Pesquise por nome e/ou localização</small
+                >
+                <input type="text" id="filtro" placeholder="Pesquisar" />
+            </header>
+
+            <ul id="resultado" class="lista-usuarios">
+                <li>
+                    <h3>Carregando...</h3>
+                </li>
+            </ul>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

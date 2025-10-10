@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.8.11/tailwind.min.css"
+            integrity="sha512-KO1h5ynYuqsFuEicc7DmOQc+S9m2xiCKYlC3zcZCSEw0RGDsxcMnppRaMZnb0DdzTDPaW22ID/gAGCZ9i+RT/w=="
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="estilo.css" />
+        <title>Força da Senha com Imagem</title>
+    </head>
+    <body>
+        <div class="background" id="background"></div>
+        <div class="bg-white rounded p-10 text-center shadow-md">
+            <h1 class="text-3xl">Força da Senha com Imagem</h1>
+            <p class="text-sm text-gray-700">
+                Altere a senha para ver o efeito
+            </p>
+
+            <div class="my-4 text-left">
+                <label for="email" class="text-gray-900">E-mail:</label>
+                <input
+                    type="text"
+                    class="border block w-full p-2 mt-2 rounded"
+                    id="email"
+                    placeholder="Digite seu e-mail"
+                />
+            </div>
+
+            <div class="my-4 text-left">
+                <label for="password" class="text-gray-900">Senha:</label>
+                <input
+                    type="password"
+                    class="border block w-full p-2 mt-2 rounded"
+                    id="password"
+                    placeholder="Digite sua senha"
+                />
+            </div>
+
+            <button
+                class="bg-black text-white py-2 mt-4 inline-block w-full rounded"
+                type="submit"
+            >
+                Enviar
+            </button>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
